@@ -50,20 +50,27 @@ public class DashboardController {
 	public ModelAndView dashboardMainPage() {
 
 		ModelAndView model = new ModelAndView();
-		model.addObject("title", "Spring Security + Hibernate Example");
-		model.addObject("message", "This page is for ROLE_ADMIN only!");
-		model.setViewName("Dashboard");
+		model.setViewName("dashboard");
 
 		return model;
 
 	}
 
-	@RequestMapping(value = "/dashboard/add", method = RequestMethod.GET)
-	public ModelAndView dashboardAddPost() {
+	@RequestMapping(value = "/dashboard/authors", method = RequestMethod.GET)
+	public ModelAndView dashboardAuthors() {
 
 		ModelAndView model = new ModelAndView();
+		model.setViewName("dashboardauthors");
 
-		model.setViewName("DashboardPost");
+		return model;
+
+	}
+
+	@RequestMapping(value = "/dashboard/stats", method = RequestMethod.GET)
+	public ModelAndView dashboardStats() {
+
+		ModelAndView model = new ModelAndView();
+		model.setViewName("dashboardstats");
 
 		return model;
 
@@ -86,7 +93,7 @@ public class DashboardController {
 		if (logout != null) {
 			model.addObject("msg", "You've been logged out successfully.");
 		}
-		model.setViewName("login");
+		model.setViewName("dashboardlogin"); 
 
 		return model;
 
