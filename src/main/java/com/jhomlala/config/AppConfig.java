@@ -46,10 +46,10 @@ public class AppConfig {
 	public BasicDataSource dataSource() {
 		
 		BasicDataSource ds = new BasicDataSource();
-	    ds.setDriverClassName("com.mysql.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://datalizer.ovh:3306/");
-		ds.setUsername("database_admin");
-		ds.setPassword("My-strongPassword-Sql");
+	    ds.setDriverClassName("");
+		ds.setUrl("");
+		ds.setUsername("");
+		ds.setPassword("");
 		return ds;  
 	}
 	
