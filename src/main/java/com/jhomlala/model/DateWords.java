@@ -8,26 +8,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name = "date", catalog = "TeamCity_database")
+@Table(name = "refresh_date", catalog = "Words_database")
 
 
 
 public class DateWords {
 
-	private Integer iddate;
+	private Integer id;
 	private Timestamp date;
 	
 	
 	
 	@Id
 	@GeneratedValue
-	@Column(name = "iddate", unique = true, nullable = false, length = 11)
+	@Column(name = "id", unique = true, nullable = false, length = 11)
 	
-	public Integer getIddate() {
-		return iddate;
+	public Integer getId() {
+		return id;
 	}
-	public void setIddate(Integer iddate) {
-		this.iddate = iddate;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 	@Column(name = "date", nullable = false)
